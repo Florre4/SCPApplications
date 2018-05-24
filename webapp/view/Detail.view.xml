@@ -1,0 +1,59 @@
+<mvc:View controllerName="wiwcloud.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:footerbar="sap.ushell.ui.footerbar">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}" busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<ObjectHeader id="objectHeader" title="{TITEL} {VOORNAAM} {FAMNAAM}" icon="{URL_FOTO}">
+								<ObjectAttribute id="attribute1" title="HOOFDPERNR" text="{HOOFDPERNR}"/>
+								<ObjectAttribute id="attribute2" title="GSMNUMMER" text="{GSMNUMMER}"/>
+								
+			</ObjectHeader>
+			<Table id="lineItemsList" width="auto" items="{Email}" updateFinished="onListUpdateFinished" mode="MultiSelect" noDataText="{i18n>detailLineItemTableNoDataText}" busyIndicatorDelay="{detailView>/lineItemTableDelay}" class="sapUiResponsiveMargin">
+				<headerToolbar>
+					<Toolbar id="lineItemsToolbar">
+						<Title id="lineItemsHeader" text="{detailView>/lineItemListTitle}"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column>
+						<Text text="{i18n>detailLineItemTableIDColumn}" id="seqnr"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>detailLineItemTableUnitNumberColumn}" id="email"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{MAILADRES}" text="{SEQNR}"/>
+							<ObjectNumber/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</semantic:content>
+		<semantic:addAction>
+			<semantic:AddAction id="addButton" enabled="true" press="onAdd"/>
+		</semantic:addAction>
+		<!--
+		<semantic:editAction>
+			<semantic:EditAction id="edit" press="onEdit"/>
+		</semantic:editAction>
+		-->
+		<semantic:customFooterContent>
+			<Button enabled="true" id="deleteButton" press="onDelete" text="Delete Person"/>
+		</semantic:customFooterContent>
+		<semantic:customFooterContent>
+			<Button enabled="true" id="deleteMailButton" press="onDeleteMail" text="Delete Mail"/>
+		</semantic:customFooterContent>
+		<!--
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+		<semantic:shareInJamAction>
+			<semantic:ShareInJamAction id="shareInJam" visible="{FLP>/isShareInJamActive}" press="onShareInJamPress"/>
+		</semantic:shareInJamAction>
+		<semantic:saveAsTileAction>
+			<footerbar:AddBookmarkButton id="shareTile" title="{detailView>/saveAsTileTitle}"/>
+		</semantic:saveAsTileAction>
+		-->
+	</semantic:DetailPage>
+</mvc:View>
