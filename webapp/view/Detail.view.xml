@@ -37,14 +37,14 @@
 		<semantic:editAction>
 			<semantic:EditAction id="edit" press="onEdit"/>
 		</semantic:editAction>
-		-->
+
 		<semantic:customFooterContent>
 			<Button enabled="true" id="deleteButton" press="onDelete" text="Delete Person"/>
 		</semantic:customFooterContent>
 		<semantic:customFooterContent>
 			<Button enabled="true" id="deleteMailButton" press="onDeleteMail" text="Delete Mail"/>
 		</semantic:customFooterContent>
-		<!--
+
 		<semantic:sendEmailAction>
 			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
 		</semantic:sendEmailAction>
