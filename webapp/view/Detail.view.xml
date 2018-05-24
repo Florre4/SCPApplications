@@ -4,7 +4,7 @@
 			<ObjectHeader id="objectHeader" title="{TITEL} {VOORNAAM} {FAMNAAM}" icon="{URL_FOTO}">
 								<ObjectAttribute id="attribute1" title="HOOFDPERNR" text="{HOOFDPERNR}"/>
 								<ObjectAttribute id="attribute2" title="GSMNUMMER" text="{GSMNUMMER}"/>
-								
+								<ObjectAttribute id="attribute3" title="MANDT" text="{MANDT}"/>
 			</ObjectHeader>
 			<Table id="lineItemsList" width="auto" items="{Email}" updateFinished="onListUpdateFinished" mode="MultiSelect" noDataText="{i18n>detailLineItemTableNoDataText}" busyIndicatorDelay="{detailView>/lineItemTableDelay}" class="sapUiResponsiveMargin">
 				<headerToolbar>

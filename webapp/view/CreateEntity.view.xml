@@ -15,15 +15,15 @@
 					<Input name="HOOFDPERNR" id="HOOFDPERNR_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement"
 						enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true"
 						value="{ path: 'HOOFDPERNR', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:8, nullable:false } }"/>
+					<Label text="TITEL" required="true"/>
+					<Input name="TITEL" id="TITEL_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'TITEL', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:15, nullable:false } }"/>
 					<Label text="FAMNAAM" required="true"/>
 					<Input name="FAMNAAM" id="FAMNAAM_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
 						value="{ path: 'FAMNAAM', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:40, nullable:false } }"/>
 					<Label text="VOORNAAM" required="true"/>
 					<Input name="VOORNAAM" id="VOORNAAM_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
 						value="{ path: 'VOORNAAM', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:40, nullable:false } }"/>
-					<Label text="TITEL" required="true"/>
-					<Input name="TITEL" id="TITEL_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
-						value="{ path: 'TITEL', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:15, nullable:false } }"/>
 					<Label text="GSMNUMMER" required="true"/>
 					<Input name="GSMNUMMER" id="GSMNUMMER_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
 						value="{ path: 'GSMNUMMER', type: 'sap.ui.model.odata.type.String' , constraints:{ maxLength:14, nullable:false } }"/>
